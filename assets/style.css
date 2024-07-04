@@ -93,18 +93,6 @@ header .menu-icon div{
     background-color: #FFFFFF;
 }
 
-/* RESPONSIVO PRA TABLET */
-
-@media (max-width: 820px) {
-    header nav{
-        display: none;
-    }
-
-    header .menu-mobile{
-        display: flex;
-    }
-}
-
 /* CSS DO HERO */
 
 .hero .container{
@@ -118,22 +106,31 @@ header .menu-icon div{
     flex: 1;
 }
 
-.hero .container .leftside h1{
+.hero .leftside h1{
     font-size: 60px;
     color: #FFFFFF;
     font-family: 'Calistoga', Arial, Helvetica, sans-serif;
     font-weight: 100;
 }
 
-.hero .container .leftside p{
-    margin-top: 35px;
+.hero .leftside p{
+    margin: 40px 0;
     color: #b3b3b3;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-.hero .container .leftside .button a{
-    text-decoration: none;
+.hero .button{
+    background-color: #FE6A0F;
+    display: inline-block;
     color: #FFFFFF;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border: 1px solid #FE6A0F;
+    padding: 20px 60px;
+}
+
+.hero .button:hover{
+    opacity: 0.8;
 }
 
 .hero .rightside img{
@@ -141,3 +138,32 @@ header .menu-icon div{
     height: 600px;
 }
 
+/* RESPONSIVO PRA TABLET */
+
+@media (max-width: 820px) {
+    header nav{
+        display: none;
+    }
+
+    header .menu-mobile{
+        display: flex;
+    }
+
+    .hero .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero .leftside{
+        padding-bottom: 60px;
+        text-align: center;
+    }
+
+    .hero .rightside{
+        padding-bottom: 30px;
+    }
+
+    .hero .rightside img{
+        height: 300px;
+    }
+}
