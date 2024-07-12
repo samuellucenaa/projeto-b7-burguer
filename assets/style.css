@@ -188,7 +188,69 @@ header .menu-icon div{
     border-right: 20px solid transparent;
 }
 
-/* RESPONSIVO PRA TABLET */
+/* PRODUCTS */
+
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.products-item{
+    display: block;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.products-item:hover{
+    opacity: 0.8;
+}
+
+.products-item .warning{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #FFFFFF;
+    background-color: #FE6A0F;
+    border: 1px solid #FE6A0F;
+    border-radius: 5px;
+    padding: 10px 17px;
+}
+
+.products-item .photo{
+    text-align: center;
+    background-color: #2B2B2B;
+    padding-top: 30px;
+}
+
+.products-item .photo img{
+    height: 170px;
+    margin-bottom: -50px;
+}
+
+.products-item .info{
+    background-color: #1F1F1F;
+    padding: 40px 0;
+    padding-left: 30px;
+    color: #FFFFFF;
+}
+
+.products-item .info .product-name{
+    font-family: 'Calistoga', Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.products-item .info .product-price{
+    color: #FE6A0F;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* RESPONSIVO */
 
 @media (max-width: 820px) {
     .logo a{
@@ -214,6 +276,10 @@ header .menu-icon div{
         text-align: center;
     }
 
+    .hero .leftside h1{
+        font-size: 45px;
+    }
+
     .hero .rightside{
         padding-bottom: 30px;
     }
@@ -234,5 +300,16 @@ header .menu-icon div{
         flex-direction: column;
         gap: 15px;
         margin: 20px;
+    }
+
+    .products-grid{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 30px;
+    }
+}
+
+@media (max-width: 500px){
+    .products-grid{
+        grid-template-columns: 1fr;
     }
 }
