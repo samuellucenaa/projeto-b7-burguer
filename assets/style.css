@@ -340,3 +340,9 @@ footer .info{
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 396px){
+    footer .logo{
+        margin-left: 20px;
+    }
+}
